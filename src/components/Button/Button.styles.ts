@@ -17,6 +17,14 @@ export const ButtonStyles = css<ButtonProps>(({ theme, $buttonType }) => {
   padding: 10px 16px;
   position: relative;
   text-align: center;
+
+  &:disabled {
+    background-color: #cccccc;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
 `;
 });
 

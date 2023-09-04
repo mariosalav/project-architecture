@@ -2,6 +2,7 @@ import { type MouseEventHandler } from 'react';
 
 export interface ButtonProps {
   $buttonType: ButtonType;
+  $class?: string;
   text?: string;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;

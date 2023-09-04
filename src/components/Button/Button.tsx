@@ -12,10 +12,16 @@ StyledButton.defaultProps = {
   theme: COLORS_THEME,
 };
 
-const Button: React.FC<ButtonProps> = ({ text, disabled, onClick, $buttonType }) => {
+const Button: React.FC<ButtonProps> = ({ text, disabled, onClick, $buttonType, $class }) => {
   return (
     <ThemeProvider theme={COLORS_THEME}>
-      <StyledButton type="button" $buttonType={$buttonType} disabled={disabled} onClick={onClick}>
+      <StyledButton
+        type="button"
+        className={$class}
+        $buttonType={$buttonType}
+        disabled={disabled}
+        onClick={onClick}
+      >
         {text}
       </StyledButton>
     </ThemeProvider>
