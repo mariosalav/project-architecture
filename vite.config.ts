@@ -1,17 +1,23 @@
 import { defineConfig } from 'vite';
-import path from 'node:path';
+import { peerDependencies } from './package.json';
+import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import react from '@vitejs/plugin-react';
-import { name, peerDependencies } from './package.json';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), dts()],
+  plugins: [
+    react({
+      babel: {
+        plugins: ['babel-plugin-styled-components'],
+      },
+    }),
+    dts({ include: ['lib'] }),
+  ],
   build: {
+    copyPublicDir: false,
     lib: {
-      entry: path.resolve(__dirname, 'lib/index.ts'),
-      name,
-      fileName: (format) => `${name}.${format}.ts`,
+      entry: resolve(__dirname, 'lib/index.ts'),
       formats: ['es'],
     },
     rollupOptions: {

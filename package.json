@@ -3,12 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "main": "dist/react-components-library.js",
+  "types": "dist/lib/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc --p ./tsconfig-build.json && vite build",
-    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint lib --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write src//**/*.{ts,tsx,css} --config ./.prettierrc",
+    "format": "prettier --write lib//**/*.{ts,tsx,css} --config ./.prettierrc",
     "prepare": "husky install",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -41,6 +46,7 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.0.0",
     "@vitejs/plugin-react": "^4.0.3",
+    "babel-plugin-styled-components": "^2.1.4",
     "commitizen": "^4.3.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.0.1",
@@ -64,7 +70,7 @@
     "storybook": "^7.3.1",
     "styled-components": "^6.0.7",
     "ts-jest": "^29.1.1",
-    "typescript": "^5.1.6",
+    "typescript": "5.1.6",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.5.3"
   },

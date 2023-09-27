@@ -1,5 +1,5 @@
-import { type DefaultTheme, css } from 'styled-components';
-import { type ButtonType, type ButtonProps } from './Button.model';
+import { DefaultTheme, css } from 'styled-components';
+import { ButtonType, ButtonProps } from './Button.model';
 
 export const ButtonStyles = css<ButtonProps>(({ theme, $buttonType }) => {
   return `
