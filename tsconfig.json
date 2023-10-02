@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
@@ -20,7 +21,11 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@themes/*": ["lib/common/themes/*"],
+      "@common/*": ["lib/common/*"]
+    }
   },
   "include": ["src", "lib"],
   "exclude": ["dist", "node_modules", "lib/**/*.test.tsx"],

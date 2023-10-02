@@ -4,8 +4,13 @@ import { resolve } from 'path';
 import dts from 'vite-plugin-dts';
 import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@themes': resolve(__dirname, 'lib/common/themes'),
+      '@common': resolve(__dirname, 'lib/common'),
+    },
+  },
   plugins: [
     react({
       babel: {
