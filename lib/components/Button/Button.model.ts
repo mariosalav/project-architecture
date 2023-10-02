@@ -1,9 +1,11 @@
-import { type MouseEventHandler } from 'react';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import { MouseEventHandler } from 'react';
 
 export interface ButtonProps {
   $buttonType: ButtonType;
   $class?: string;
   text?: string;
+  iconName?: IconProp;
   disabled?: boolean;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
