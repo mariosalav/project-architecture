@@ -25,6 +25,23 @@ export const ButtonStyles = css<ButtonProps>(({ theme, $buttonType }) => {
   &:hover {
     opacity: 0.8;
   }
+
+  div.button-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      order: 1;
+      margin-left: 0.4rem
+    }
+
+    &.only-icon {
+      svg {
+        margin-left: 0
+      }
+    }
+  }
 `;
 });
 
