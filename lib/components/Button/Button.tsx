@@ -23,6 +23,14 @@ const Button: React.FC<ButtonProps> = ({
   $class,
   iconName,
 }) => {
+  const onlyIconClass = text === undefined && iconName !== undefined ? 'only-icon' : '';
+  const buttonContent = (
+    <div className={`button-content ${onlyIconClass}`}>
+      {iconName !== undefined && <FontAwesomeIcon icon={iconName} />}
+      {text}
+    </div>
+  );
+
   return (
     <ThemeProvider theme={COLORS_THEME}>
       <StyledButton
@@ -32,8 +40,7 @@ const Button: React.FC<ButtonProps> = ({
         disabled={disabled}
         onClick={onClick}
       >
-        {iconName !== undefined && <FontAwesomeIcon icon={iconName} />}
-        {text}
+        {buttonContent}
       </StyledButton>
     </ThemeProvider>
   );
