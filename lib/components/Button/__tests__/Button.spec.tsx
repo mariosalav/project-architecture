@@ -8,8 +8,6 @@ describe('Button', () => {
 
     const button = screen.getByRole('button');
 
-    console.log(button);
-
     expect(button).toHaveStyleRule('background-color', '#195DE6');
   });
 });
