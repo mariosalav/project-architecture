@@ -1,7 +1,7 @@
 import { DefaultTheme, css } from 'styled-components';
 import { ButtonType, ButtonProps } from './Button.model';
 
-export const ButtonStyles = css<ButtonProps>(({ theme, $buttonType }) => {
+export const buttonStyles = css<ButtonProps>(({ theme, $buttonType }) => {
   return `
   display: inline-block;
   cursor: pointer;

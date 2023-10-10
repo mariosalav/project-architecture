@@ -1,2 +1,2 @@
 export { default } from './Input';
-export { type ButtonProps, ButtonType } from './Input.model';
+export { type InputProps } from './Input.model';
