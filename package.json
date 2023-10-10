@@ -1,7 +1,7 @@
 {
   "name": "@mariosalav/react-components-library",
   "private": false,
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "main": "dist/react-components-library.js",
   "types": "dist/index.d.ts",
