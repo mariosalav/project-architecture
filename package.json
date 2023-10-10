@@ -1,7 +1,7 @@
 {
   "name": "@mariosalav/react-components-library",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/react-components-library.js",
   "types": "dist/index.d.ts",
@@ -9,6 +9,12 @@
   "license": "ISC",
   "files": [
     "dist"
+  ],
+  "keywords": [
+    "react",
+    "components library",
+    "good practices",
+    "javascript"
   ],
   "scripts": {
     "dev": "vite",
