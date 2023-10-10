@@ -17,9 +17,10 @@ export const inputWrapperStyles = css<InputProps>(({ $floatingLabel }) => {
 
 export const inputStyles = css<InputProps>(({ disabled, $error, success, $floatingLabel }) => {
   return `
+    font-size: 16px;
     color: #353637;
     width: 100%;
-    height: calc(3.5rem + 2px);
+    height: calc(3.5em + 2px);
     background: #fff;
     border: 2px solid ${
       disabled ? '#e4e3ea' : $error ? '#a9150b' : success ? '#067d68' : '#353637'
@@ -30,7 +31,7 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
     font-family: inherit;
 
     &::placeholder {
-      font-size: 1rem;
+      font-size: 16px;
     }
 
     ${
@@ -40,8 +41,8 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
         border: solid 2px #1b116e;
         outline:none;
         ~ .control-label{
-          top:0;
-          font-size: 0.75rem;
+          top: 6px;
+          font-size: 16px;
         }
       }
 
@@ -51,18 +52,18 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
       }
 
       &::placeholder-shown {
-        top: 0;
-        font-size: 0.75rem;
+        top: 6px;
+        font-size: 14px;
       }
 
       &:focus::placeholder {
         opacity: 1;
       }
 
-      &:not(:placeholder-shown) + label,
-      &:focus + label {
-        top: 0;
-        font-size: 0.75rem;
+      &:not(:placeholder-shown) + .control-label,
+      &:focus + .control-label {
+        top: 6px;
+        font-size: 16px;
       }
     
     `
@@ -74,12 +75,11 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
 
 export const labelStyles = css<InputProps>(({ disabled, $floatingLabel }) => {
   return `
-    font-size: 16px;
     color: ${disabled ? '#e4e3ea' : '#080808'};
     ${$floatingLabel ? 'position: absolute;' : ''}
     order: -1;
-    left: 1rem;
-    top: 1.5rem;
+    left: 25px;
+    top: 34px;
     padding-bottom: 6px;
     background:#fff;
     transition:0.2s ease all; 
