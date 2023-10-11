@@ -43,7 +43,7 @@ const Input: React.FC<InputProps> = ({
   ...props
 }) => {
   return (
-    <StyledInputWrapper>
+    <StyledInputWrapper $floatingLabel={$floatingLabel}>
       <StyledInput
         id={id}
         type={type}
