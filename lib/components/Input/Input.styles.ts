@@ -7,10 +7,10 @@ export const inputWrapperStyles = css<InputProps>(({ $floatingLabel }) => {
       $floatingLabel
         ? 'position: relative;'
         : `
-      display: flex;
-      flex-direction: column;
-    `
+        `
     }
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
   `;
 });
@@ -41,7 +41,7 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
         border: solid 2px #1b116e;
         outline:none;
         ~ .control-label{
-          top: 6px;
+          top: -8px;
           font-size: 16px;
         }
       }
@@ -52,7 +52,7 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
       }
 
       &::placeholder-shown {
-        top: 6px;
+        top: -8px;
         font-size: 14px;
       }
 
@@ -62,7 +62,7 @@ export const inputStyles = css<InputProps>(({ disabled, $error, success, $floati
 
       &:not(:placeholder-shown) + .control-label,
       &:focus + .control-label {
-        top: 6px;
+        top: -8px;
         font-size: 16px;
       }
     
@@ -78,8 +78,8 @@ export const labelStyles = css<InputProps>(({ disabled, $floatingLabel }) => {
     color: ${disabled ? '#e4e3ea' : '#080808'};
     ${$floatingLabel ? 'position: absolute;' : ''}
     order: -1;
-    left: 25px;
-    top: 34px;
+    left: 14px;
+    top: 17px;
     padding-bottom: 6px;
     background:#fff;
     transition:0.2s ease all; 
