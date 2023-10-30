@@ -38,8 +38,9 @@ const Input: React.FC<InputProps> = ({
   message,
   disabled,
   placeholder = '',
-  onChange,
   $floatingLabel = false,
+  onChange,
+  render,
   ...props
 }) => {
   return (
@@ -70,6 +71,7 @@ const Input: React.FC<InputProps> = ({
           <StyledText $error={$error}>{message}</StyledText>
         </StyledMessage>
       )}
+      {render?.()}
     </StyledInputWrapper>
   );
 };

@@ -15,9 +15,9 @@ StyledButton.defaultProps = {
   theme: COLORS_THEME,
 };
 
-const Button: React.FC<ButtonProps> = ({ text, iconName, ...props }) => {
+const Button: React.FC<ButtonProps> = ({ type = 'button', text, iconName, render, ...props }) => {
   const onlyIconClass = !text && iconName ? 'only-icon' : '';
-  const buttonContent = (
+  const buttonDefaultContent = (
     <div className={`button-content ${onlyIconClass}`}>
       {iconName && <FontAwesomeIcon icon={iconName} />}
       {text}
@@ -26,8 +26,8 @@ const Button: React.FC<ButtonProps> = ({ text, iconName, ...props }) => {
 
   return (
     <ThemeProvider theme={COLORS_THEME}>
-      <StyledButton type="button" {...props}>
-        {buttonContent}
+      <StyledButton type={type} {...props}>
+        {render?.() ?? buttonDefaultContent}
       </StyledButton>
     </ThemeProvider>
   );
