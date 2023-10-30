@@ -11,5 +11,6 @@ export interface InputProps {
   message?: string;
   disabled?: boolean;
   placeholder?: string;
+  render?: () => React.ReactNode;
   onChange?: ChangeEventHandler<HTMLInputElement>;
 }
